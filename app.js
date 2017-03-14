@@ -23,6 +23,6 @@ var video = youtubedl('https://www.youtube.com/watch?v=lMJh3aAziZM',
   video.pipe(fs.createWriteStream('myvideo.mp4'));
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!')
 })
